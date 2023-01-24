@@ -6,14 +6,13 @@ import classes from './AvailableMeals.module.css';
 
 const AvailableMeals = () => {
 	const [meals, setMeals] = useState([]);
-	const [isLoading, setIsLoading] = useState(false);
-	const [httpError, setHttpError] = useState(null);
+	const [isLoading, setIsLoading] = useState(true);
+	const [httpError, setHttpError] = useState();
 
 	useEffect(() => {
 		const fetchMeals = async () => {
-			setIsLoading(true);
 			const response = await fetch(
-				'https://react-http-48df4-default-rtdb.firebaseio.com/meals.json'
+        'https://react-http-48df4-default-rtdb.firebaseio.com/meals.json'
 			);
 
 			if (!response.ok) {
@@ -21,6 +20,7 @@ const AvailableMeals = () => {
 			}
 
 			const responseData = await response.json();
+
 			const loadedMeals = [];
 
 			for (const key in responseData) {
@@ -31,6 +31,7 @@ const AvailableMeals = () => {
 					price: responseData[key].price,
 				});
 			}
+
 			setMeals(loadedMeals);
 			setIsLoading(false);
 		};
@@ -43,7 +44,7 @@ const AvailableMeals = () => {
 
 	if (isLoading) {
 		return (
-			<section className={classes.mealsLoading}>
+			<section className={classes.MealsLoading}>
 				<p>Loading...</p>
 			</section>
 		);
@@ -51,7 +52,7 @@ const AvailableMeals = () => {
 
 	if (httpError) {
 		return (
-			<section className={classes.mealsError}>
+			<section className={classes.MealsError}>
 				<p>{httpError}</p>
 			</section>
 		);
