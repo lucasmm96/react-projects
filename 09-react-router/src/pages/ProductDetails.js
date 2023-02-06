@@ -8,7 +8,7 @@ const ProductDetails = () => {
 			<h1>Product Detail</h1>
 			<p>Product Id: {param.productId}</p>
 			<p>
-				Go back to <Link to="/">Homepage</Link>.
+				Go back to <Link to="/products">products</Link>.
 			</p>
 		</>
 	);
