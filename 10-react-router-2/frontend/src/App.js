@@ -22,11 +22,11 @@
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import HomePage from './pages/HomePage';
-import Events from './pages/EventsPage';
-import EventDetailPage from './pages/EventDetailPage';
-import NewEventPage from './pages/NewEventPage';
-import EditEventPage from './pages/EditEventPage';
+import Home from './pages/Home';
+import Events from './pages/Events';
+import EventDetail from './pages/EventDetail';
+import NewEvent from './pages/NewEvent';
+import EditEvent from './pages/EditEvent';
 import RootLayout from './pages/Root';
 import EventsRootLayout from './pages/EventsRoot';
 
@@ -36,15 +36,15 @@ function App() {
 			path: '/',
 			element: <RootLayout />,
 			children: [
-				{ index: true, element: <HomePage /> },
+				{ index: true, element: <Home /> },
 				{
 					path: 'events',
 					element: <EventsRootLayout />,
 					children: [
 						{ index: true, element: <Events /> },
-						{ path: ':eventId', element: <EventDetailPage /> },
-						{ path: 'new', element: <NewEventPage /> },
-						{ path: ':eventId/edit', element: <EditEventPage /> },
+						{ path: ':eventId', element: <EventDetail /> },
+						{ path: 'new', element: <NewEvent /> },
+						{ path: ':eventId/edit', element: <EditEvent /> },
 					],
 				},
 			],
