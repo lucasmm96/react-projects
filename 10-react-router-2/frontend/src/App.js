@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import Error from './pages/Error';
 import Home from './pages/Home';
 import Events, { loader as eventsLoader } from './pages/Events';
 import EventDetail from './pages/EventDetail';
@@ -13,6 +14,7 @@ function App() {
 		{
 			path: '/',
 			element: <RootLayout />,
+			errorElement: <Error />,
 			children: [
 				{ index: true, element: <Home /> },
 				{
