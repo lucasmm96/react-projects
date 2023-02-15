@@ -24,6 +24,7 @@ export async function loadEvents() {
 		return resData.events;
 	}
 }
+
 export function loader() {
 	return defer({
 		events: loadEvents(),
