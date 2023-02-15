@@ -1,18 +1,1 @@
-{
-	"events": [
-		{
-			"title": "Evento 000",
-			"image": "https://images.shiksha.com/mediadata/images/articles/1583747992phpzaxKKK.jpeg",
-			"date": "2023-02-23",
-			"description": "Evento 000",
-			"id": "1f3a23eb-038a-4f43-859d-e73b45ca84a0"
-		},
-		{
-			"title": "Evento 001",
-			"image": "https://images.shiksha.com/mediadata/images/articles/1583747992phpzaxKKK.jpeg",
-			"date": "2023-02-17",
-			"description": "Evento 001",
-			"id": "117e1f02-bbdf-4bf9-98d9-571fa8ab8088"
-		}
-	]
-}
+{"events":[{"title":"Evento 000","image":"https://images.shiksha.com/mediadata/images/articles/1583747992phpzaxKKK.jpeg","date":"2023-02-23","description":"Evento 000","id":"1f3a23eb-038a-4f43-859d-e73b45ca84a0"},{"title":"Evento 001","image":"https://images.shiksha.com/mediadata/images/articles/1583747992phpzaxKKK.jpeg","date":"2023-02-17","description":"Evento 001","id":"117e1f02-bbdf-4bf9-98d9-571fa8ab8088"}]}
