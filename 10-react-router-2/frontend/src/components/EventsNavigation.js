@@ -12,7 +12,7 @@ function EventsNavigation() {
 							className={({ isActive }) =>
 								isActive ? classes.active : undefined
 							}
-              end
+							end
 						>
 							All Events
 						</NavLink>

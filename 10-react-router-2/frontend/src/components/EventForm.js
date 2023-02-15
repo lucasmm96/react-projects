@@ -70,11 +70,11 @@ function EventForm({ method, event }) {
 				/>
 			</p>
 			<div className={classes.actions}>
-				<button type="button" disabled={isSubmitting} onClick={cancelHandler}>
+				<button type="button" onClick={cancelHandler} disabled={isSubmitting}>
 					Cancel
 				</button>
 				<button disabled={isSubmitting}>
-					{isSubmitting ? 'Submitting' : 'Save'}
+					{isSubmitting ? 'Submitting...' : 'Save'}
 				</button>
 			</div>
 		</Form>
@@ -86,6 +86,7 @@ export default EventForm;
 export async function action({ request, params }) {
 	const method = request.method;
 	const data = await request.formData();
+
 	const eventData = {
 		title: data.get('title'),
 		image: data.get('image'),
@@ -94,8 +95,10 @@ export async function action({ request, params }) {
 	};
 
 	let url = 'http://localhost:8080/events';
+
 	if (method === 'PATCH') {
-		url = 'http://localhost:8080/events/' + params.eventId;
+		const eventId = params.eventId;
+		url = 'http://localhost:8080/events/' + eventId;
 	}
 
 	const response = await fetch(url, {
