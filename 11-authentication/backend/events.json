@@ -13,6 +13,11 @@
 			"email": "lucasma@br.ibm.com",
 			"password": "$2a$12$SplcDwkkV2SK.iAZfQIcNuam/svZooZo3IIxPd47qTTAm3SZ6o3rq",
 			"id": "805a8c5b-7c3a-47ab-9de2-69cc2bc71670"
+		},
+		{
+			"email": "lucasma2@br.ibm.com",
+			"password": "$2a$12$.e03xUdsrA89UiCdV5wVTuEVgqXEwv740SLuTn7pagKAu0SMy2qRa",
+			"id": "519721c4-4f12-43b9-9874-115f21c0580a"
 		}
 	]
 }
