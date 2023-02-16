@@ -6,6 +6,13 @@
 			"date": "2022-10-01",
 			"description": "Some awesome event!",
 			"id": "2a42fcc4-ea21-4bdd-abf6-c40006dc66a9"
+		},
+		{
+			"title": "A new event",
+			"image": "https://cdn.muenchen-p.de/fl_progressive,q_65/.imaging/stk/responsive/teaser300/dms/va-2016/muenchner-christkindlmarkt/christkindlmarkt-marienplat-logo-hp/document/christkindlmarkt-marienplat-logo-hp.jpg",
+			"date": "2022-10-01",
+			"description": "Some awesome event!",
+			"id": "519721c4-4f12-43b9-9874-115f21c0580a"
 		}
 	],
 	"users": [
@@ -18,6 +25,11 @@
 			"email": "lucasma2@br.ibm.com",
 			"password": "$2a$12$.e03xUdsrA89UiCdV5wVTuEVgqXEwv740SLuTn7pagKAu0SMy2qRa",
 			"id": "519721c4-4f12-43b9-9874-115f21c0580a"
+		},
+		{
+			"email": "teste@br.ibm.com",
+			"password": "$2a$12$HYTY.5yEQhippBs/awXJO.g2m0I5tpP94poYlATaSlO5lHCoT./aC",
+			"id": "61db233b-19b7-42a7-a523-1fd91532162c"
 		}
 	]
 }
