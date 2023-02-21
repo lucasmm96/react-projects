@@ -17,7 +17,8 @@ import RootLayout from './pages/Root';
 import { action as manipulateEventAction } from './components/EventForm';
 import NewsletterPage, { action as newsletterAction } from './pages/Newsletter';
 import { action as logoutAction } from './pages/Logout';
-import { loader as tokenLoader } from './util/auth';
+import { authLoader, checkAuthLoader } from './util/auth';
+
 
 const router = createBrowserRouter([
 	{
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
 		element: <RootLayout />,
 		errorElement: <ErrorPage />,
 		id: 'root',
-		loader: tokenLoader,
+		loader: authLoader,
 		children: [
 			{ index: true, element: <HomePage /> },
 			{
@@ -51,6 +52,7 @@ const router = createBrowserRouter([
 								path: 'edit',
 								element: <EditEventPage />,
 								action: manipulateEventAction,
+								loader: checkAuthLoader
 							},
 						],
 					},
@@ -58,6 +60,7 @@ const router = createBrowserRouter([
 						path: 'new',
 						element: <NewEventPage />,
 						action: manipulateEventAction,
+						loader: checkAuthLoader
 					},
 				],
 			},
