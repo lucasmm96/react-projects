@@ -29,12 +29,25 @@ function HomePage(props) {
 	return <MeetupList meetups={props.meetups}></MeetupList>;
 }
 
+// get data for each new request
+// export async function getServerSideProps(context) {
+// 	const req = context.req;
+// 	const res = context.res;
+
+// 	return {
+// 		props: {
+// 			meetups: DUMMY_MEETUP
+// 		}
+// 	};
+// }
+
+// get data according to frequency defined (in seconds) on 'revalidate' field.
 export async function getStaticProps() {
 	return {
 		props: {
 			meetups: DUMMY_MEETUP,
 		},
-		revalidate: 10
+		revalidate: 10,
 	};
 }
 
